@@ -1,11 +1,8 @@
-grunt-appdmg
-============
+# grunt-appdmg
 
 > Grunt plugin for generating Mac OSX DMG-images
 
-Overview
---------
-
+## Overview
 [node-appdmg](https://github.com/LinusU/node-appdmg) is an awesome command line tool to generate Mac disk images.
 This grunt plugin wraps the node-appdmg and executes it using Gruntfile.  
 You can use Grunt template strings in the appdmg config, like: `title: '<%= pkg.name %>'`.
@@ -13,9 +10,7 @@ You can use Grunt template strings in the appdmg config, like: `title: '<%= pkg.
 **Note:**  
 grunt-appdmg works on **Mac OS X only** due to the node-appdmg limitation.
 
-Getting Started
----------------
-
+## Getting Started
 If you are new to Grunt, you will find a lot of answers to your questions in their [getting started guide](http://gruntjs.com/getting-started).  
 Install this plugin with this command:
 
@@ -29,9 +24,7 @@ Once the plugin has been installed, it may be enabled inside your "Gruntfile.js"
 grunt.loadNpmTasks('grunt-appdmg');
 ```
 
-The "appdmg" task
------------------
-
+## The "appdmg" task
 In your project's Gruntfile, add a section named `appdmg` to the data object passed into `grunt.initConfig()`.
 
 ```js
@@ -75,7 +68,5 @@ Please refer the [JSON Specification](https://github.com/LinusU/node-appdmg#json
 
 * **configFile** `String` Default: `.tmp/appdmg/config.json` - Path to the temporary config file for appdmg task.
 
-License
--------
-
+## License
 Copyright (c) 2014 Rakuten, Inc. Licensed under the [MIT License](http://opensource.org/licenses/MIT).
