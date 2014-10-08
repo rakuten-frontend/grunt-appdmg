@@ -1,0 +1,1 @@
+{"title":"grunt-appdmg Test","app":"../../test/fixtures/TestApp.app","background":"../../test/fixtures/TestBkg.png","icon":null,"icons":{"size":80,"app":[192,344],"alias":[448,344]},"extra":[["../../test/fixtures/TestDoc.txt",512,128]]}
