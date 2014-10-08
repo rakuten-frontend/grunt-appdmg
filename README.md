@@ -27,8 +27,8 @@ grunt.loadNpmTasks('grunt-appdmg');
 ## The "appdmg" task
 
 ### Options
-Options except for **configFile** follow the spec of [node-appdmg](https://github.com/LinusU/node-appdmg).
-Please refer the [JSON Specification](https://github.com/LinusU/node-appdmg#json-specification) for details.
+See the [JSON Specification](https://github.com/LinusU/node-appdmg#json-specification) of node-appdmg.
+Options except for **configFile** follow the spec.
 
 #### configFile
 Type: 'String'  
