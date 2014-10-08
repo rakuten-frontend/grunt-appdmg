@@ -1,4 +1,4 @@
-# grunt-appdmg
+# grunt-appdmg [![Build Status](https://travis-ci.org/rakuten-frontend/grunt-appdmg.svg?branch=master)](https://travis-ci.org/rakuten-frontend/grunt-appdmg)
 
 > Grunt plugin for generating Mac OSX DMG-images
 
