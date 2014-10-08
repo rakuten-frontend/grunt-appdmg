@@ -31,9 +31,12 @@ exports.appdmg = {
   },
 
   basic: function (test) {
-    test.expect(1);
+    test.expect(2);
     var exists = fs.existsSync('tmp/basic.dmg');
+    var actual = grunt.file.read('.tmp/appdmg/config.json');
+    var expected = grunt.file.read('test/expected/config.json');
     test.ok(exists, 'should create the dmg file with basic option.');
+    test.equal(actual, expected, 'should describe what the behavior of basic option is.');
     test.done();
   },
 

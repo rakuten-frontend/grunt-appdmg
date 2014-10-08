@@ -32,14 +32,22 @@ module.exports = function (grunt) {
     appdmg: {
       options: {
         title: '<%= pkg.name %> Test',
-        app: 'test/fixtures/TestApp.app',
         background: 'test/fixtures/TestBkg.png',
-        icon: 'test/fixtures/TestIcon.icns',
-        icons: {
-          size: 80,
-          app: [192, 344],
-          alias: [448, 344]
-        }
+        'icon-size': 80,
+        contents: [
+          {
+            x: 192,
+            y: 344,
+            type: 'file',
+            path: 'test/fixtures/TestApp.app'
+          },
+          {
+            x: 448,
+            y: 344,
+            type: 'link',
+            path: '/Applications'
+          }
+        ]
       },
       basic: {
         dest: 'tmp/basic.dmg'
@@ -48,9 +56,26 @@ module.exports = function (grunt) {
         dest: 'tmp/extra.dmg',
         options: {
           configFile: '.tmp/appdmg/extra.json',
-          icon: null,
-          extra: [
-            ['test/fixtures/TestDoc.txt', 512, 128]
+          icon: 'test/fixtures/TestIcon.icns',
+          contents: [
+            {
+              x: 192,
+              y: 344,
+              type: 'file',
+              path: 'test/fixtures/TestApp.app'
+            },
+            {
+              x: 448,
+              y: 344,
+              type: 'link',
+              path: '/Applications'
+            },
+            {
+              x: 512,
+              y: 128,
+              type: 'file',
+              path: 'test/fixtures/TestDoc.txt'
+            }
           ]
         }
       }
