@@ -25,6 +25,18 @@ grunt.loadNpmTasks('grunt-appdmg');
 ```
 
 ## The "appdmg" task
+
+### Options
+Options except for **configFile** follow the spec of [node-appdmg](https://github.com/LinusU/node-appdmg).
+Please refer the [JSON Specification](https://github.com/LinusU/node-appdmg#json-specification) for details.
+
+#### configFile
+Type: 'String'  
+Default: `.tmp/appdmg/config.json`
+
+Path to the temporary config file for appdmg task.
+
+### Example config
 In your project's Gruntfile, add a section named `appdmg` to the data object passed into `grunt.initConfig()`.
 
 ```js
@@ -32,16 +44,13 @@ grunt.initConfig({
   appdmg: {
     options: {
       title: 'Title of DMG',
-      app: 'path/to/your-app.app',
-      background: 'path/to/background.png',
       icon: 'path/to/icon.icns',
-      icons: {
-        size: 80,
-        app: [192, 344],
-        alias: [448, 344]
-      },
-      extra: [
-        ['path/to/extra-file.txt', 512, 128]
+      background: 'path/to/background.png',
+      'icon-size': 80,
+      contents: [
+        {x: 448, y: 344, type: 'link', path: '/Applications'},
+        {x: 192, y: 344, type: 'file', path: 'path/to/your-app.app'},
+        {x: 512, y: 128, type: 'file', path: 'path/to/extra-file.txt'}
       ]
     },
     target: {
@@ -50,23 +59,6 @@ grunt.initConfig({
   }
 });
 ```
-
-### Options
-Options except for **configFile** follow the spec of node-appdmg.
-Please refer the [JSON Specification](https://github.com/LinusU/node-appdmg#json-specification) for details.
-
-* **title** `String` (Required) - The title of the produced DMG, which will be shown when mounted.
-* **app** `String` (Required) - Path to your .app.
-* **background** `String` (Required) - Path to your background.
-* **icon** `String` - Path to your icon, which will be shown when mounted.
-* **icons** `Object` (Required) - Size and position of the icons in the DMG.
-  * **size** `Number` (Required) - Icon size.
-  * **app** `Array` (Required) - Position of your application. Specified as X and Y in the center of icon.
-  * **alias** `Array` (Required) - Position of alias to the Applications folder.
-  * **extra** `Array` - Optional extra files to be put in the DMG. Each entry is [path, Xpos, Ypos].
-
-
-* **configFile** `String` Default: `.tmp/appdmg/config.json` - Path to the temporary config file for appdmg task.
 
 ## License
 Copyright (c) 2014 Rakuten, Inc. Licensed under the [MIT License](http://opensource.org/licenses/MIT).
