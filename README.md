@@ -60,6 +60,12 @@ grunt.initConfig({
 });
 ```
 
+## Contributing
+Now we are considering our contribution policy in the future development.
+We will decide the policy in the near future.  
+After that, we will accept your contribution including issue reports.
+Thank you.
+
 ## License
 Copyright (c) 2014 Rakuten, Inc. Licensed under the [MIT License](http://opensource.org/licenses/MIT).
 
