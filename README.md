@@ -1,4 +1,4 @@
-# grunt-appdmg [![NPM Version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
+# grunt-appdmg [![NPM Version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][deps-image]][deps-url]
 
 > Grunt plugin for generating Mac OS X DMG-images
 
@@ -73,4 +73,5 @@ Copyright (c) 2014 Rakuten, Inc. Licensed under the [MIT License](http://opensou
 [npm-url]: https://www.npmjs.org/package/grunt-appdmg
 [travis-image]: https://img.shields.io/travis/rakuten-frontend/grunt-appdmg/master.svg?style=flat
 [travis-url]: https://travis-ci.org/rakuten-frontend/grunt-appdmg
-
+[deps-image]: http://img.shields.io/david/rakuten-frontend/grunt-appdmg.svg?style=flat
+[deps-url]: https://david-dm.org/rakuten-frontend/grunt-appdmg
