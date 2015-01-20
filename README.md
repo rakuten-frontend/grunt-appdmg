@@ -1,6 +1,10 @@
-# grunt-appdmg [![NPM Version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][deps-image]][deps-url]
+# grunt-appdmg
 
 > Grunt plugin for generating Mac OS X DMG-images
+
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Dependency Status][deps-image]][deps-url]
 
 ## Overview
 [node-appdmg](https://github.com/LinusU/node-appdmg) is an awesome command line tool to generate Mac disk images.
@@ -67,10 +71,10 @@ After that, we will accept your contribution including issue reports.
 Thank you.
 
 ## License
-Copyright (c) 2014-2015 Rakuten, Inc. Licensed under the [MIT License](http://opensource.org/licenses/MIT).
+Copyright (c) 2014-2015 Rakuten, Inc. Licensed under the [MIT License](LICENSE-MIT).
 
 [npm-image]: https://img.shields.io/npm/v/grunt-appdmg.svg?style=flat
-[npm-url]: https://www.npmjs.org/package/grunt-appdmg
+[npm-url]: https://www.npmjs.com/package/grunt-appdmg
 [travis-image]: https://img.shields.io/travis/rakuten-frontend/grunt-appdmg/master.svg?style=flat
 [travis-url]: https://travis-ci.org/rakuten-frontend/grunt-appdmg
 [deps-image]: http://img.shields.io/david/rakuten-frontend/grunt-appdmg.svg?style=flat
