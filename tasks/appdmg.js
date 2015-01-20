@@ -30,6 +30,7 @@ module.exports = function (grunt) {
       delete config.configFile;
 
       // Replace properties with correct relative path
+      // TODO: Cleanup the replacement after app-dmg supports base path or other solution.
       pathProperties.forEach(function (property) {
         if (config[property]) {
           config[property] = path.relative(baseDir, options[property]);
@@ -58,6 +59,7 @@ module.exports = function (grunt) {
       grunt.file.mkdir(dirname);
 
       // Run appdmg module.
+      // TODO: Remove logging and use native appdmg's method in the future release.
       emitter = appdmg(options.configFile, filePair.dest);
       emitter.on('progress', function (info) {
         if (info.type === 'step-begin') {
