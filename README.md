@@ -67,7 +67,7 @@ After that, we will accept your contribution including issue reports.
 Thank you.
 
 ## License
-Copyright (c) 2014 Rakuten, Inc. Licensed under the [MIT License](http://opensource.org/licenses/MIT).
+Copyright (c) 2014-2015 Rakuten, Inc. Licensed under the [MIT License](http://opensource.org/licenses/MIT).
 
 [npm-image]: https://img.shields.io/npm/v/grunt-appdmg.svg?style=flat
 [npm-url]: https://www.npmjs.org/package/grunt-appdmg
