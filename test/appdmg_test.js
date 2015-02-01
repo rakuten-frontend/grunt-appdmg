@@ -31,22 +31,16 @@ exports.appdmg = {
   },
 
   basic: function (test) {
-    test.expect(2);
-    var exists = fs.existsSync('.tmp/basic.dmg');
-    var actual = grunt.file.read('.tmp/appdmg/config.json');
-    var expected = grunt.file.read('test/expected/config.json');
+    test.expect(1);
+    var exists = fs.existsSync('test/.tmp/basic.dmg');
     test.ok(exists, 'should create the dmg file with basic option.');
-    test.equal(actual, expected, 'should describe what the behavior of basic option is.');
     test.done();
   },
 
   extra: function (test) {
-    test.expect(2);
-    var exists = fs.existsSync('.tmp/extra.dmg');
-    var actual = grunt.file.read('.tmp/appdmg/extra.json');
-    var expected = grunt.file.read('test/expected/extra.json');
+    test.expect(1);
+    var exists = fs.existsSync('test/.tmp/extra.dmg');
     test.ok(exists, 'should create the dmg file with extra option.');
-    test.equal(actual, expected, 'should describe what the behavior of extra option is.');
     test.done();
   }
 

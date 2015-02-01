@@ -32,13 +32,6 @@ grunt.loadNpmTasks('grunt-appdmg');
 
 ### Options
 See the [JSON Specification](https://github.com/LinusU/node-appdmg#json-specification) of node-appdmg.
-Options except for **configFile** follow the spec.
-
-#### configFile
-Type: 'String'  
-Default: `.tmp/appdmg/config.json`
-
-Path to the temporary config file for appdmg task.
 
 ### Example config
 In your project's Gruntfile, add a section named `appdmg` to the data object passed into `grunt.initConfig()`.

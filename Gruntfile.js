@@ -25,21 +25,22 @@ module.exports = function (grunt) {
 
     // Before generating any new files, remove any previously-created files.
     clean: {
-      tests: ['.tmp']
+      tests: ['test/.tmp']
     },
 
     // Configuration to be run (and then tested).
     appdmg: {
       options: {
+        basepath: 'test/fixtures/',
         title: '<%= pkg.name %> Test',
-        background: 'test/fixtures/TestBkg.png',
+        background: 'TestBkg.png',
         'icon-size': 80,
         contents: [
           {
             x: 192,
             y: 344,
             type: 'file',
-            path: 'test/fixtures/TestApp.app'
+            path: 'TestApp.app'
           },
           {
             x: 448,
@@ -50,19 +51,19 @@ module.exports = function (grunt) {
         ]
       },
       basic: {
-        dest: '.tmp/basic.dmg'
+        dest: 'test/.tmp/basic.dmg'
       },
       extra: {
-        dest: '.tmp/extra.dmg',
+        dest: 'test/.tmp/extra.dmg',
+
         options: {
-          configFile: '.tmp/appdmg/extra.json',
-          icon: 'test/fixtures/TestIcon.icns',
+          icon: 'TestIcon.icns',
           contents: [
             {
               x: 192,
               y: 344,
               type: 'file',
-              path: 'test/fixtures/TestApp.app'
+              path: 'TestApp.app'
             },
             {
               x: 448,
@@ -74,7 +75,7 @@ module.exports = function (grunt) {
               x: 512,
               y: 128,
               type: 'file',
-              path: 'test/fixtures/TestDoc.txt'
+              path: 'TestDoc.txt'
             }
           ]
         }
