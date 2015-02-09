@@ -13,6 +13,11 @@ module.exports = function (grunt) {
     var options = this.options();
     var done = this.async();
 
+    if (options.configFile) {
+      grunt.log.warn('"configFile" option has been deprecated.');
+      delete options.configFile;
+    }
+
     var basepath = options.basepath || process.cwd();
     delete options.basepath;
 
