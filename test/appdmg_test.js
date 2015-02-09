@@ -32,14 +32,14 @@ exports.appdmg = {
 
   basic: function (test) {
     test.expect(1);
-    var exists = fs.existsSync('test/.tmp/basic.dmg');
+    var exists = fs.existsSync('test/tmp/basic.dmg');
     test.ok(exists, 'should create the dmg file with basic option.');
     test.done();
   },
 
   extra: function (test) {
     test.expect(1);
-    var exists = fs.existsSync('test/.tmp/extra.dmg');
+    var exists = fs.existsSync('test/tmp/extra.dmg');
     test.ok(exists, 'should create the dmg file with extra option.');
     test.done();
   }

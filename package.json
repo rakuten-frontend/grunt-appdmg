@@ -8,7 +8,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/rakuten-frontend/grunt-appdmg/blob/master/LICENSE-MIT"
+      "url": "https://github.com/rakuten-frontend/grunt-appdmg/blob/master/LICENSE"
     }
   ],
   "repository": {
@@ -33,14 +33,14 @@
   },
   "files": [
     "tasks",
-    "LICENSE-MIT"
+    "LICENSE"
   ],
   "dependencies": {
     "appdmg": "^0.3.0",
     "chalk": "^0.5.1"
   },
   "peerDependencies": {
-    "grunt": "^0.4.0"
+    "grunt": ">=0.4.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

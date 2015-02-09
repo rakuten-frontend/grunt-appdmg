@@ -25,7 +25,7 @@ module.exports = function (grunt) {
 
     // Before generating any new files, remove any previously-created files.
     clean: {
-      tests: ['test/.tmp']
+      tests: ['test/tmp']
     },
 
     // Configuration to be run (and then tested).
@@ -51,11 +51,10 @@ module.exports = function (grunt) {
         ]
       },
       basic: {
-        dest: 'test/.tmp/basic.dmg'
+        dest: 'test/tmp/basic.dmg'
       },
       extra: {
-        dest: 'test/.tmp/extra.dmg',
-
+        dest: 'test/tmp/extra.dmg',
         options: {
           icon: 'TestIcon.icns',
           contents: [
@@ -92,7 +91,7 @@ module.exports = function (grunt) {
   // Actually load this plugin's task(s).
   grunt.loadTasks('tasks');
 
-  // Whenever the "test" task is run, first clean the ".tmp" dir, then run this
+  // Whenever the "test" task is run, first clean the "test/tmp" dir, then run this
   // plugin's task(s), then test the result.
   grunt.registerTask('test', ['jshint', 'clean', 'appdmg', 'nodeunit']);
 

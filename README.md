@@ -32,6 +32,13 @@ grunt.loadNpmTasks('grunt-appdmg');
 
 ### Options
 See the [JSON Specification](https://github.com/LinusU/node-appdmg#json-specification) of node-appdmg.
+`basepath` is also supported.
+
+#### basepath
+Type: `String`  
+Default: `process.cwd()` - Project root
+
+Optional. Base path to look for asset files: `icon`, `background` and `contents.path`.
 
 ### Example config
 In your project's Gruntfile, add a section named `appdmg` to the data object passed into `grunt.initConfig()`.
@@ -40,31 +47,26 @@ In your project's Gruntfile, add a section named `appdmg` to the data object pas
 grunt.initConfig({
   appdmg: {
     options: {
+      basepath: 'path/to/assets',
       title: 'Title of DMG',
-      icon: 'path/to/icon.icns',
-      background: 'path/to/background.png',
+      icon: 'icon.icns',
+      background: 'background.png',
       'icon-size': 80,
       contents: [
         {x: 448, y: 344, type: 'link', path: '/Applications'},
-        {x: 192, y: 344, type: 'file', path: 'path/to/your-app.app'},
-        {x: 512, y: 128, type: 'file', path: 'path/to/extra-file.txt'}
+        {x: 192, y: 344, type: 'file', path: 'your-app.app'},
+        {x: 512, y: 128, type: 'file', path: 'extra-file.txt'}
       ]
     },
     target: {
-      dest: 'your-app.dmg'
+      dest: 'path/to/your-app.dmg'
     }
   }
 });
 ```
 
-## Contributing
-Now we are considering our contribution policy in the future development.
-We will decide the policy in the near future.  
-After that, we will accept your contribution including issue reports.
-Thank you.
-
 ## License
-Copyright (c) 2014-2015 Rakuten, Inc. Licensed under the [MIT License](LICENSE-MIT).
+Copyright (c) 2014-2015 Rakuten, Inc. Licensed under the [MIT License](LICENSE).
 
 [npm-image]: https://img.shields.io/npm/v/grunt-appdmg.svg?style=flat
 [npm-url]: https://www.npmjs.com/package/grunt-appdmg
