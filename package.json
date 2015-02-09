@@ -36,9 +36,8 @@
     "LICENSE-MIT"
   ],
   "dependencies": {
-    "appdmg": "^0.2.2",
-    "chalk": "^0.5.1",
-    "lodash": "^2.4.1"
+    "appdmg": "^0.3.0",
+    "chalk": "^0.5.1"
   },
   "peerDependencies": {
     "grunt": "^0.4.0"
