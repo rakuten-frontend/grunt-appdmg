@@ -30,33 +30,58 @@ module.exports = function (grunt) {
 
     // Configuration to be run (and then tested).
     appdmg: {
-      options: {
-        basepath: 'test/fixtures/',
-        title: '<%= pkg.name %> Test',
-        background: 'TestBkg.png',
-        'icon-size': 80,
-        contents: [
-          {
-            x: 192,
-            y: 344,
-            type: 'file',
-            path: 'TestApp.app'
-          },
-          {
-            x: 448,
-            y: 344,
-            type: 'link',
-            path: '/Applications'
-          }
-        ]
-      },
       basic: {
+        options: {
+          title: '<%= pkg.name %> Test',
+          background: 'test/fixtures/TestBkg.png',
+          'icon-size': 80,
+          contents: [
+            {
+              x: 192,
+              y: 344,
+              type: 'file',
+              path: 'test/fixtures/TestApp.app'
+            },
+            {
+              x: 448,
+              y: 344,
+              type: 'link',
+              path: '/Applications'
+            }
+          ]
+        },
         dest: 'test/tmp/basic.dmg'
       },
-      extra: {
-        dest: 'test/tmp/extra.dmg',
+      basepath: {
         options: {
+          basepath: 'test/fixtures/',
+          title: '<%= pkg.name %> Test',
+          background: 'TestBkg.png',
+          'icon-size': 80,
+          contents: [
+            {
+              x: 192,
+              y: 344,
+              type: 'file',
+              path: 'TestApp.app'
+            },
+            {
+              x: 448,
+              y: 344,
+              type: 'link',
+              path: '/Applications'
+            }
+          ]
+        },
+        dest: 'test/tmp/basepath.dmg'
+      },
+      extra: {
+        options: {
+          basepath: 'test/fixtures/',
+          title: '<%= pkg.name %> Test',
           icon: 'TestIcon.icns',
+          background: 'TestBkg.png',
+          'icon-size': 80,
           contents: [
             {
               x: 192,
@@ -77,7 +102,8 @@ module.exports = function (grunt) {
               path: 'TestDoc.txt'
             }
           ]
-        }
+        },
+        dest: 'test/tmp/extra.dmg'
       }
     },
 
