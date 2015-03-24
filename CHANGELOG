@@ -1,3 +1,7 @@
+v0.3.1:
+  date: 2015-03-24
+  changes:
+    - Specify the supported OS in package.json.
 v0.3.0:
   date: 2015-02-09
   changes:
