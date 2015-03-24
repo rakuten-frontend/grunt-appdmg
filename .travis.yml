@@ -1,4 +1,5 @@
 language: objective-c
+sudo: false
 os:
   - osx
 before_install:
