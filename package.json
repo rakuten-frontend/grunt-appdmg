@@ -1,6 +1,6 @@
 {
   "name": "grunt-appdmg",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Grunt plugin for generating Mac OS X DMG-images",
   "author": {
     "name": "Rakuten, Inc."
