@@ -31,7 +31,8 @@
   },
   "files": [
     "tasks",
-    "LICENSE"
+    "LICENSE",
+    "CHANGELOG.md"
   ],
   "dependencies": {
     "appdmg": "^0.3.0",
