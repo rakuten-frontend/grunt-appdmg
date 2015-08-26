@@ -36,7 +36,7 @@ module.exports = function (grunt) {
       emitter.on('progress', function (info) {
         if (info.type === 'step-begin') {
           var line =  '[' + (info.current <= 9 ? ' ' : '') + info.current + '/' + info.total + '] ' + info.title + '...';
-          grunt.log.write(line + String.repeat(' ', 45 - line.length));
+          grunt.log.write(line + grunt.util.repeat(' ', 45 - line.length));
         }
         if (info.type === 'step-end') {
           var op = ({
