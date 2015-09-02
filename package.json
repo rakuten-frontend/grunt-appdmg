@@ -35,7 +35,7 @@
     "CHANGELOG.md"
   ],
   "dependencies": {
-    "appdmg": "^0.3.0",
+    "appdmg": "0.3.2",
     "chalk": "^1.0.0"
   },
   "peerDependencies": {
