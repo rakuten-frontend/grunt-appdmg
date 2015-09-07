@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.3.2 (2015-09-07)
+- Fix fatal error when using appdmg v0.3.3+. ([#4](https://github.com/rakuten-frontend/grunt-appdmg/issues/4))
+
 ## 0.3.1 (2015-03-24)
 - Specify the supported OS in package.json.
 
