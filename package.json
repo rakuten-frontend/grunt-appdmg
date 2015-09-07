@@ -30,9 +30,7 @@
     "test": "grunt test --verbose"
   },
   "files": [
-    "tasks",
-    "LICENSE",
-    "CHANGELOG.md"
+    "tasks"
   ],
   "dependencies": {
     "appdmg": "^0.3.0",
