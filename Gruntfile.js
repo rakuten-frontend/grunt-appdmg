@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = function (grunt) {
-
   // load all npm grunt tasks
   require('load-grunt-tasks')(grunt);
 
@@ -10,17 +9,13 @@ module.exports = function (grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
 
-    // JSHint
-    jshint: {
+    // ESLint
+    eslint: {
       all: [
         'Gruntfile.js',
         'tasks/*.js',
-        '<%= nodeunit.tests %>'
-      ],
-      options: {
-        jshintrc: '.jshintrc',
-        reporter: require('jshint-stylish')
-      }
+        'tests/*.js'
+      ]
     },
 
     // Before generating any new files, remove any previously-created files.
@@ -119,9 +114,8 @@ module.exports = function (grunt) {
 
   // Whenever the "test" task is run, first clean the "test/tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['jshint', 'clean', 'appdmg', 'nodeunit']);
+  grunt.registerTask('test', ['eslint', 'clean', 'appdmg', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['test']);
-
 };

@@ -5,11 +5,9 @@ var appdmg = require('appdmg');
 var chalk = require('chalk');
 
 module.exports = function (grunt) {
-
   // Please see the Grunt documentation for more information regarding task
   // creation: http://gruntjs.com/creating-tasks
   grunt.registerMultiTask('appdmg', 'Generate DMG-images for Mac OSX', function () {
-
     var options = this.options();
     var done = this.async();
 
@@ -23,7 +21,6 @@ module.exports = function (grunt) {
 
     // Iterate over all specified file groups.
     this.files.forEach(function (filePair) {
-
       var dirname = path.dirname(filePair.dest);
       var emitter;
 
@@ -31,11 +28,11 @@ module.exports = function (grunt) {
       grunt.file.mkdir(dirname);
 
       // Run appdmg module.
-      // TODO: Remove logging and use native appdmg's method in the future release.
+      // Remove logging and use native appdmg's method in the future release.
       emitter = appdmg({basepath: basepath, specification: options, target: filePair.dest});
       emitter.on('progress', function (info) {
         if (info.type === 'step-begin') {
-          var line =  '[' + (info.current <= 9 ? ' ' : '') + info.current + '/' + info.total + '] ' + info.title + '...';
+          var line = '[' + (info.current <= 9 ? ' ' : '') + info.current + '/' + info.total + '] ' + info.title + '...';
           grunt.log.write(line + grunt.util.repeat(45 - line.length, ' '));
         }
         if (info.type === 'step-end') {
@@ -47,17 +44,14 @@ module.exports = function (grunt) {
           grunt.log.write('[' + chalk[op[0]](op[1]) + ']\n');
         }
       });
-      emitter.on('finish', function (image) {
+      emitter.on('finish', function () {
         grunt.log.writeln('\nImage: ' + chalk.cyan(filePair.dest) + ' was created');
         done();
       });
-      emitter.on('error', function (info) {
+      emitter.on('error', function () {
         grunt.log.error('Error');
         done(false);
       });
-
     });
-
   });
-
 };
