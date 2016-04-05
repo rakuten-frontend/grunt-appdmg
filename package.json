@@ -29,6 +29,7 @@
   "scripts": {
     "test": "grunt test --verbose"
   },
+  "main": "tasks/appdmg.js",
   "files": [
     "tasks"
   ],
