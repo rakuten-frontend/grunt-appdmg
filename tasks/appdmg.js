@@ -46,8 +46,8 @@ module.exports = function (grunt) {
         grunt.log.writeln('\nImage: ' + chalk.cyan(filePair.dest) + ' was created');
         done();
       });
-      emitter.on('error', function () {
-        grunt.log.error('Error');
+      emitter.on('error', function (err) {
+        grunt.log.error(err.toString());
         done(false);
       });
     });
