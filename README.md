@@ -14,10 +14,10 @@ You can use [Grunt template strings](http://gruntjs.com/api/grunt.template) in t
 **Note:**  
 Currently grunt-appdmg works on **Mac OS X only** due to the [node-appdmg limitation](https://github.com/LinusU/node-appdmg/issues/14).
 
-## Getting Started
+## Getting started
 
 This plugin requires [Grunt](http://gruntjs.com/) `>=0.4.0`.  
-If you haven't used Grunt before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide.
+If you haven't used Grunt before, be sure to check out the [Getting started](http://gruntjs.com/getting-started) guide.
 
 ### Install
 ```shell
