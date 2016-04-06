@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.3 (2016-04-06)
+- Support Grunt v1.0.0.
+- Show detailed error message when task failed.
+
 ## 0.3.2 (2015-09-07)
 - Fix fatal error when using appdmg v0.3.3+. ([#4](https://github.com/rakuten-frontend/grunt-appdmg/issues/4))
 
