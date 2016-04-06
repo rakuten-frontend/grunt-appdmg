@@ -38,6 +38,7 @@
     "chalk": "^1.0.0"
   },
   "devDependencies": {
+    "eslint": "^2.7.0",
     "eslint-config-xo-space": "^0.11.0",
     "grunt": "^1.0.0",
     "grunt-contrib-clean": "^1.0.0",
