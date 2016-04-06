@@ -5,8 +5,6 @@ var appdmg = require('appdmg');
 var chalk = require('chalk');
 
 module.exports = function (grunt) {
-  // Please see the Grunt documentation for more information regarding task
-  // creation: http://gruntjs.com/creating-tasks
   grunt.registerMultiTask('appdmg', 'Generate DMG-images for Mac OSX', function () {
     var options = this.options();
     var done = this.async();

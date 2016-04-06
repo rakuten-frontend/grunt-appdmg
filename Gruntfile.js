@@ -1,12 +1,9 @@
 'use strict';
 
 module.exports = function (grunt) {
-  // load all npm grunt tasks
   require('load-grunt-tasks')(grunt);
 
-  // Project configuration.
   grunt.initConfig({
-
     pkg: grunt.file.readJSON('package.json'),
 
     // ESLint
@@ -14,16 +11,16 @@ module.exports = function (grunt) {
       all: [
         'Gruntfile.js',
         'tasks/*.js',
-        'tests/*.js'
+        'test/*.js'
       ]
     },
 
-    // Before generating any new files, remove any previously-created files.
+    // Clean up
     clean: {
       tests: ['test/tmp']
     },
 
-    // Configuration to be run (and then tested).
+    // "appdmg" task for tests
     appdmg: {
       basic: {
         options: {
@@ -102,14 +99,12 @@ module.exports = function (grunt) {
       }
     },
 
-    // Unit tests.
+    // Unit tests
     nodeunit: {
       tests: ['test/*_test.js']
     }
-
   });
 
-  // Actually load this plugin's task(s).
   grunt.loadTasks('tasks');
 
   // Whenever the "test" task is run, first clean the "test/tmp" dir, then run this
