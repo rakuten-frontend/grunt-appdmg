@@ -1,11 +1,15 @@
-language: objective-c
-sudo: false
-os:
-  - osx
+language: node_js
+os: osx
+osx_image: xcode7.3
+node_js:
+  - 6
+  - 5
+  - 4
+  - 0.12
+  - 0.10
 before_install:
+  - nvm use --delete-prefix $TRAVIS_NODE_VERSION
+  - uname -a
+  - if [ "$TRAVIS_OS_NAME" == "osx" ]; then sw_vers; fi
   - node --version
   - npm --version
-install:
-  - npm install
-script:
-  - npm test
