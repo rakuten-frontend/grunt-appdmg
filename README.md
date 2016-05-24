@@ -7,7 +7,7 @@
 
 ## Overview
 **[node-appdmg](https://github.com/LinusU/node-appdmg)** is an awesome command line tool that can generate beautiful disk images (.dmg) for your OS X applications.
-This Grunt plugin executes it using Gruntfile.
+This Grunt plugin executes it programmatically using Gruntfile.
 
 You can use [Grunt template strings](http://gruntjs.com/api/grunt.template) in the appdmg config, like: `title: '<%= pkg.name %>'`.
 
