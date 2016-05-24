@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.0 (2016-05-24)
+- Update appdmg to v0.4.5.
+- Test on multiple Node.js versions: 6, 5, 4, 0.12.
+
 ## 0.3.3 (2016-04-06)
 - Support Grunt v1.0.0.
 - Show detailed error message when task failed.
