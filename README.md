@@ -20,7 +20,7 @@ This plugin requires [Grunt](http://gruntjs.com/) `>=0.4.0`.
 If you haven't used Grunt before, be sure to check out the [Getting started](http://gruntjs.com/getting-started) guide.
 
 ### Install
-```shell
+```sh
 $ npm install grunt-appdmg --save-dev
 ```
 
@@ -37,7 +37,7 @@ This will prevent npm-install error on Windows/Linux.
 ## The "appdmg" task
 
 ### Options
-See the **[JSON Specification](https://github.com/LinusU/node-appdmg#json-specification)** of node-appdmg.  
+See the **[appdmg specification](https://github.com/LinusU/node-appdmg#json-input)**.  
 Additionally `basepath` option is available in this plugin.
 
 #### basepath
@@ -57,7 +57,6 @@ grunt.initConfig({
       title: 'Title of DMG',
       icon: 'icon.icns',
       background: 'background.png',
-      'icon-size': 80,
       contents: [
         {x: 448, y: 344, type: 'link', path: '/Applications'},
         {x: 192, y: 344, type: 'file', path: 'your-app.app'},

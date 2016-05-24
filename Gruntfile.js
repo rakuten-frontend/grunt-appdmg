@@ -26,7 +26,6 @@ module.exports = function (grunt) {
         options: {
           title: '<%= pkg.name %> Test',
           background: 'test/fixtures/TestBkg.png',
-          'icon-size': 80,
           contents: [
             {
               x: 192,
@@ -49,7 +48,6 @@ module.exports = function (grunt) {
           basepath: 'test/fixtures/',
           title: '<%= pkg.name %> Test',
           background: 'TestBkg.png',
-          'icon-size': 80,
           contents: [
             {
               x: 192,
