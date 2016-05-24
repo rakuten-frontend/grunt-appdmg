@@ -3,6 +3,7 @@
 var path = require('path');
 var appdmg = require('appdmg');
 var chalk = require('chalk');
+var repeatString = require('repeat-string');
 
 module.exports = function (grunt) {
   grunt.registerMultiTask('appdmg', 'Generate DMG-images for Mac OSX', function () {
@@ -33,7 +34,7 @@ module.exports = function (grunt) {
       emitter.on('progress', function (info) {
         if (info.type === 'step-begin') {
           var line = '[' + (info.current <= 9 ? ' ' : '') + info.current + '/' + info.total + '] ' + info.title + '...';
-          grunt.log.write(line + grunt.util.repeat(45 - line.length, ' '));
+          grunt.log.write(line + repeatString(' ', 45 - line.length));
         }
 
         if (info.type === 'step-end') {
