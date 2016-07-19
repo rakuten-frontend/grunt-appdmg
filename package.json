@@ -56,5 +56,11 @@
         "as-needed"
       ]
     }
+  },
+  "greenkeeper": {
+    "ignore": [
+      "eslint",
+      "grunt-eslint"
+    ]
   }
 }
