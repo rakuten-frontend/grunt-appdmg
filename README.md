@@ -71,7 +71,7 @@ grunt.initConfig({
 ```
 
 ## License
-Copyright (c) 2014-2016 Rakuten, Inc.
+Copyright (c) 2014-2017 Rakuten, Inc.
 Licensed under the [MIT License](LICENSE).
 
 [npm-image]: https://img.shields.io/npm/v/grunt-appdmg.svg
