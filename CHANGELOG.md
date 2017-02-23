@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0 (2017-02-23)
+- Update suppoted Node.js versions according to [LTS schedule](https://github.com/nodejs/LTS).
+  - Support Node.js 7.
+  - Unsupport Node.js 0.12 and 5.
+
 ## 0.4.0 (2016-05-24)
 - Update appdmg to v0.4.5.
 - Test on multiple Node.js versions: 6, 5, 4, 0.12.
