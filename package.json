@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "eslint": "^3.16.1",
-    "eslint-config-xo-space": "^0.15.0",
+    "eslint-config-xo-space": "^0.16.0",
     "grunt": "^1.0.0",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-nodeunit": "^1.0.0",
