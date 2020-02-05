@@ -35,7 +35,7 @@
     "tasks"
   ],
   "dependencies": {
-    "appdmg": "^0.4.5",
+    "appdmg": "^0.6.0",
     "chalk": "^1.0.0",
     "repeat-string": "^1.5.4"
   },
