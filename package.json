@@ -1,6 +1,6 @@
 {
   "name": "grunt-appdmg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Grunt plugin for generating Mac OS X DMG-images.",
   "author": {
     "name": "Rakuten, Inc."
@@ -23,9 +23,6 @@
   "engines": {
     "node": ">=4"
   },
-  "os": [
-    "darwin"
-  ],
   "scripts": {
     "test": "grunt test --verbose",
     "grunt": "grunt"
@@ -35,9 +32,11 @@
     "tasks"
   ],
   "dependencies": {
-    "appdmg": "^0.4.5",
     "chalk": "^1.0.0",
     "repeat-string": "^1.5.4"
+  },
+  "optionalDependencies": {
+    "appdmg": "^0.5.2 || ^0.6.0"
   },
   "devDependencies": {
     "eslint": "^3.16.1",
